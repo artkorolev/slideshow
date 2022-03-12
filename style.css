@@ -15,6 +15,10 @@ img {
     display: block;
 }
 
+.wrapper {
+    padding: 10px;
+}
+
 .slideshow-container {
     position: relative;
     max-width: 800px;
@@ -96,5 +100,58 @@ img {
     100% {
         transform: rotateY(0deg) translateY(0) skewY(0deg);
         opacity: 1;
+    }
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-left: -50px;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .next {
+        margin-right: -50px;
+    }
+}
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 991px) {
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-left: 0;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .next {
+        margin-right: 0;
+    }
+}
+
+/* xs (<=543px) */
+@media (max-width: 575px) {
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-left: 0;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .next {
+        margin-right: 0;
+    }
+    .caption {
+        padding: 7px;
+        font-size: 14px;
     }
 }
